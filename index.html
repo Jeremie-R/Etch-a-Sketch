@@ -10,20 +10,48 @@
 </head>
 <body>
 
-    <!-- title -->
+    <div class="content">
 
-    <!-- main section to draw -->
+        <!-- title -->
+        <h1>Etch a scetch</h1>
 
-    <!-- controler section -->
-        <!-- 
-            current colour
-            solid/ rainbowm mode switch
-            clear
-            set grid size (slider ?)
-         -->
+   
+        <div class="draw-and-control">
+
+            <!-- main section to draw -->
+            <div class="drawing-area" id="DrawingArea">
+                <!-- inner element to come from javascript -->
+            </div>
+
+         
+
+            <div class="controler-section">
+
+                <input type="color" id="colorPicker" value="#000000">
+
+                <div class="simple-or-rainbow">
+                    <div class="simple" id="simple">Solid</div>
+                    <div class="rainbow" id="rainbow">Rainbow</div>
+                </div>
+
+                <div class="button">Clear</div>
+
+                <div class="size-selector"></div>
+                    <p class="current-size" id="currentSize">16</p>
+                    <input type="range" min="4" max="64" value="16" class="slider" id="sizeSlider">
+                </div>
 
 
-         <script src="./app.js"></script>
+            </div>
 
+    </div>
+
+    </div> 
+    <!-- end of content -->
+
+<script src="./app.js"></script>
+
+
+    
 </body>
 </html>
