@@ -33,17 +33,18 @@ function createBoard(a) {
 //interact with a cell
 
 function cellInteraction(cellID) {
+
+    console.log(cellID);
     
     let cell = document.getElementById(cellID);
-    
-    cell.addEventListener("click", click(cell, cellID));
+    cell.addEventListener("hover", click);
     
 }
 
-function click(cell, cellID) {
-    console.log(cellID);
-    cell.style.backgroundColor = "red";
-    cell.style.opacity = "0.5";
+function click() {
+    
+    console.log("hello potato");
+    
 }
 
 //change colour
