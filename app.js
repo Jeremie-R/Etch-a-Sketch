@@ -30,8 +30,24 @@ function createBoard(size) {
             cell.className = "pixel";
             row.appendChild(cell);
 
-            cell.addEventListener("click", cellInteraction);
-            
+            // add event listeners for both mousedown and mousemove
+            cell.addEventListener("mousedown", function() {
+                isMouseDown = true;
+                cellInteraction.call(this); 
+            });
+
+            cell.addEventListener("mousemove", function() {
+                if (isMouseDown) {
+                    cellInteraction.call(this); 
+                }
+            });
+
+            cell.addEventListener("mouseup", function() {
+                isMouseDown = false;
+            });
+
+
+
         }
     }
 }
