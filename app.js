@@ -4,6 +4,11 @@
 // interact with a cell
 function cellInteraction() {
     console.log("cell clicked", this.id);
+
+    let cell = document.getElementById(this.id);
+    cell.style.backgroundColor = currentColour();
+
+
 }
 
 // create the initial board
@@ -26,6 +31,7 @@ function createBoard(size) {
             row.appendChild(cell);
 
             cell.addEventListener("click", cellInteraction);
+            
         }
     }
 }
@@ -43,11 +49,17 @@ function updateBoard(newSize) {
 // execute code after the DOM has fully loaded
 window.onload = function () {
     
-    createBoard(2);
+    createBoard(8);
+    
     
 };
 
 //change colour
+function currentColour () {
+
+    let colour = document.getElementById("colorPicker").value;
+    return colour
+}
 
 //randomize colour
 
