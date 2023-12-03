@@ -1,51 +1,51 @@
 // app
 
 
-//build the sketch area
+// interact with a cell
+function cellInteraction() {
+    console.log("cell clicked", this.id);
+}
 
-createBoard(8);
-let colour = "#000000"
-
-function createBoard(a) {
+// create the initial board
+function createBoard(size) {
     let Board = document.getElementById("DrawingArea");
 
+    // rows
+    for (let idRow = 0; idRow < size; idRow++) {
+        let row = document.createElement("div");
+        row.id = "row" + idRow;
+        row.className = "row";
+        Board.appendChild(row);
+
+        // pixels in the row
+        for (let id = 0; id < size; id++) {
+            let cellID = "row" + idRow + "cell" + id;
+            let cell = document.createElement("div");
+            cell.id = cellID;
+            cell.className = "pixel";
+            row.appendChild(cell);
+
+            cell.addEventListener("click", cellInteraction);
+        }
+    }
+}
+
+// update the board with a new size
+function updateBoard(newSize) {
+    let Board = document.getElementById("DrawingArea");
+    Board.innerHTML = "";
+
+    createBoard(newSize);
+
+   
+}
+
+// execute code after the DOM has fully loaded
+window.onload = function () {
     
-    //rows
-    for (let idRow = 0; idRow < (a); idRow++) {
-
-        Board.innerHTML += "<div id=row"+idRow+" class='row'></div>";
-        let Row = document.getElementById("row"+idRow);
-
-        //pixel in the row
-        for (let id = 0; id < (a); id++) {
-            let cellID = "row"+idRow+"cell"+id;
-            Row.innerHTML += "<div id="+cellID+" class='pixel'></div>";
-            cellInteraction(cellID);
-
-        };
-
+    createBoard(2);
     
-    };
-
-
 };
-
-//interact with a cell
-
-function cellInteraction(cellID) {
-
-    console.log(cellID);
-    
-    let cell = document.getElementById(cellID);
-    cell.addEventListener("hover", click);
-    
-}
-
-function click() {
-    
-    console.log("hello potato");
-    
-}
 
 //change colour
 
