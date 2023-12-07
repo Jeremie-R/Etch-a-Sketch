@@ -3,7 +3,7 @@
 
 // interact with a cell
 function cellInteraction() {
-    console.log("cell clicked", this.id);
+    // console.log("cell clicked", this.id); //to see all click
 
     let cell = document.getElementById(this.id);
     cell.style.backgroundColor = currentColour();
@@ -52,7 +52,19 @@ function createBoard(size) {
     }
 }
 
-// update the board with a new size
+// collect size input
+let slider = document.getElementById("sizeSlider");
+slider.addEventListener("click", sliderClicked);
+
+function sliderClicked() {
+    
+    console.log(slider.value);
+    updateBoard(slider.value);
+
+    document.getElementById("currentSize").innerHTML = String(slider.value);
+}
+
+// update+clean the board with a new size
 function updateBoard(newSize) {
     let Board = document.getElementById("DrawingArea");
     Board.innerHTML = "";
@@ -65,7 +77,8 @@ function updateBoard(newSize) {
 // execute code after the DOM has fully loaded
 window.onload = function () {
     
-    createBoard(8);
+    let boardSize = slider.value;
+    createBoard(boardSize);
     
     
 };
@@ -74,9 +87,9 @@ window.onload = function () {
 function currentColour () {
 
     let colour = document.getElementById("colorPicker").value;
-    return colour
+    return colour;
 }
 
 //randomize colour
 
-//change size 
+//clear board  
