@@ -61,11 +61,12 @@ function sliderClicked() {
     console.log(slider.value);
     updateBoard(slider.value);
 
-    document.getElementById("currentSize").innerHTML = String(slider.value);
+    document.getElementById("currentSize").innerHTML = String(slider.value) + " x " + String(slider.value);
 }
 
 // update+clean the board with a new size
 function updateBoard(newSize) {
+
     let Board = document.getElementById("DrawingArea");
     Board.innerHTML = "";
 
@@ -93,3 +94,8 @@ function currentColour () {
 //randomize colour
 
 //clear board  
+
+let clearButton = document.getElementById("clear");
+clearButton.addEventListener("click", clearClicked);
+
+function clearClicked() { updateBoard(slider.value) };
