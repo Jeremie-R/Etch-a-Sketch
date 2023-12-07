@@ -91,7 +91,9 @@ function currentColour () {
     return colour;
 }
 
-//randomize colour
+//randomize colour mode
+
+
 
 //clear board  
 
