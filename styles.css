@@ -63,3 +63,25 @@ body {
     width: 100%;
 }
 
+#colorPicker {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 64px;
+    height: 64px;
+    border: none;
+    
+}
+
+
+#colorPicker::-webkit-color-swatch {
+  border-radius: 64px;
+  border: 1px solid #000000;
+  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.15);
+}
+#colorPicker::-moz-color-swatch {
+    border-radius: 64px;
+    border: 1px solid #000000;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.15);
+  }
