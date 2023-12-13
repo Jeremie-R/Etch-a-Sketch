@@ -63,14 +63,44 @@ body {
     width: 100%;
 }
 
+
+
+.controler-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 168px;
+}
+
+.simple-or-rainbow {
+    display: flex;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    width: 100%;
+    height: 44px;
+}
+
+.switch {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.but{}
+
 #colorPicker {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-    width: 64px;
-    height: 64px;
+    width: 82px;
+    height: 86px;
     border: none;
+    cursor: pointer;
     
 }
 
