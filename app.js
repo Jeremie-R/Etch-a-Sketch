@@ -1,5 +1,5 @@
 // app
-
+let colourMode = "solid"
 
 // interact with a cell
 function cellInteraction() {
@@ -87,7 +87,7 @@ window.onload = function () {
     let boardSize = slider.value;
     createBoard(boardSize);
 
-    let colourMode = "solid";
+    
     solidClicked();
     
 };
