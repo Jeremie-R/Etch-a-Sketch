@@ -69,7 +69,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
     width: 168px;
 }
 
@@ -88,9 +88,57 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border-radius: 6px;
 }
 
-.but{}
+.button {
+    height: 44px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+.size-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    height: 6px;
+    background: #ccc;
+
+}
+
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 15px;
+    width: 15px;
+    background-color: #000;
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
 
 #colorPicker {
     -webkit-appearance: none;
@@ -101,7 +149,6 @@ body {
     height: 86px;
     border: none;
     cursor: pointer;
-    
 }
 
 
@@ -110,8 +157,10 @@ body {
   border: 1px solid #000000;
   box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.15);
 }
+
 #colorPicker::-moz-color-swatch {
     border-radius: 64px;
     border: 1px solid #000000;
     box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.15);
-  }
+}
+

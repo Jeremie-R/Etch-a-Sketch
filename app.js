@@ -5,6 +5,10 @@
 function cellInteraction() {
     // console.log("cell clicked", this.id); //to see all click
 
+    if (colourMode = "rainbow") {
+        randomColour();
+    }
+
     let cell = document.getElementById(this.id);
     cell.style.backgroundColor = currentColour();
 
@@ -80,7 +84,9 @@ window.onload = function () {
     
     let boardSize = slider.value;
     createBoard(boardSize);
-    
+
+    let colourMode = "solid";
+    solidClicked()
     
 };
 
@@ -92,6 +98,38 @@ function currentColour () {
 }
 
 //randomize colour mode
+function randomColour () {
+    let colour = "#" + Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById("colorPicker").value = colour;
+}
+
+//input for random colour
+let solidButton = document.getElementById("solid");
+solidButton.addEventListener("click", solidClicked);
+
+let rainbowButton = document.getElementById("rainbow");
+rainbowButton.addEventListener("click", rainbowClicked);
+
+
+function solidClicked() {
+    colourMode = "solid"
+
+    solidButton.style.backgroundColor = "#000000";
+    solidButton.style.color = "#ffffff";
+
+    rainbowButton.style.backgroundColor = "#EDEDED";
+    rainbowButton.style.color = "#000000";
+}
+
+function rainbowClicked() {
+    colourMode = "rainbow"
+
+    rainbowButton.style.backgroundColor = "#000000";
+    rainbowButton.style.color = "#ffffff";
+
+    solidButton.style.backgroundColor = "#EDEDED";
+    solidButton.style.color = "#000000";
+}
 
 
 
