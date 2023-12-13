@@ -8,7 +8,7 @@ function cellInteraction() {
     let cell = document.getElementById(this.id);
 
     console.log(colourMode);
-    if (colourMode = "rainbow") {
+    if (colourMode === "rainbow") {
         cell.style.backgroundColor = randomColour();
 
     } else {
