@@ -2,7 +2,7 @@
 
 [![demo image](https://jeremie-r.github.io/Etch-a-Sketch/demo.png)](https://jeremie-r.github.io/Etch-a-Sketch/index.html)
 
-little drawing exercise 
+little drawing game 
 
 > [Live preview](https://jeremie-r.github.io/Etch-a-Sketch/index.html)
 
